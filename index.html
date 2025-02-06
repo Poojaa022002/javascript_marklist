@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body> 
+    <div class="container w-50 mt-5">
+        <div class="card text-center mb-4" style="font-family:serif;">
+            <h1 class="card-header">MARKLIST</h1>
+        </div>
+        <div class="card p-4 shadow-lg">
+            <div class="mb-3">
+                <label for="tamil" class="form-label" style="font-family:serif;">TAMIL</label>
+                <input type="text" class="form-control shadow-lg" placeholder="Tamil"  id="tamil" onkeydown="return focusNextField(event, 'english');">
+            </div>
+            <div class="mb-3">
+                <label for="english" class="form-label" style="font-family:serif;">ENGLISH</label>
+                <input type="text" class="form-control shadow-lg" placeholder="English" id="english" onkeydown="return focusNextField(event, 'maths');">
+            </div>
+            <div class="mb-3">
+                <label for="maths" class="form-label" style="font-family:serif;">MATHS</label>
+                <input type="text" class="form-control shadow-lg" placeholder="Maths" id="maths" onkeydown="return focusNextField(event, 'science');">
+            </div>
+            <div class="mb-3">
+                <label for="science" class="form-label" style="font-family:serif;">SCIENCE</label>
+                <input type="text" class="form-control shadow-lg" placeholder="Science" id="science" onkeydown="return focusNextField(event, 'social');">
+            </div>
+            <div class="mb-3">
+                <label for="social" class="form-label" style="font-family:serif;">SOCIAL SCIENCE</label>
+                <input type="text" class="form-control shadow-lg" placeholder="Social science" id="social" onkeydown="return focusNextField(event, 'tot');">
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <button class="btn btn-success" onclick="cal()" style="font-family:serif;">TOTAL</button>
+                <input type="text" class="form-control w-25 shadow-lg" id="tot" readonly>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <button class="btn btn-primary" onclick="calculate()" style="font-family:serif;">PER</button>
+                <input type="text" class="form-control w-25 shadow-lg" id="per">
+            </div>
+
+            <div class="d-flex justify-content-center mb-3">
+                <button class="btn btn-info" onclick="grade()" style="font-family:serif;">GRADE</button>
+                
+            </div>
+
+            <button class="btn btn-outline-danger mx-2 shadow-sm" onclick="clr()">Clear</button>
+
+            <div id="result" class="text-center mt-4" style="font-family:serif;"></div>
+        </div>     
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
